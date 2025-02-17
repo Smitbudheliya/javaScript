@@ -1,0 +1,71 @@
+<h1 align="center">Table Of Member Details</h1>
+
+<table align="center" border="2px">
+ 
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+        <th>city</th>
+        <th>address</th>
+        <th>phone</th>
+        <th>course</th>
+        <th>status</th>
+    </thead>
+
+    <tbody id="record">
+
+    </tbody>
+
+</table>
+<script type="text/javascript">
+    let details = [{
+        id: 101,
+        name: "smit",
+        email: "smit@gmail.com",
+        city: "surat",
+        address: "india",
+        phone: "123456789",
+        course: ["java", "css", "html"],
+        status: "active",
+    },
+    {
+        id: 101,
+        name: "smit",
+        email: "babubhai@gmail.com",
+        city: "surat",
+        address: "pune",
+        phone: "123456789",
+        course: ["java", "css", "html"],
+            status: "active",
+    },
+    {
+        id: 101,
+        name: "daud",
+        email: "smit@gmail.com",
+        city: "dubai",
+        address: "laapta",
+        phone: "2222222",
+        course: ["java", "css", "html"],
+        status: "dactive",
+    },
+    ]
+    let tbl = "";
+        let filterstatus = details.filter((val) => val.status == "active" && val.city == "surat")
+        filterstatus.forEach((val, index) => {
+        tbl += `
+                <tr>
+                    <td>${val.id}</td>
+                    <td>${val.name}</td>
+                    <td>${val.email}</td>
+                    <td>${val.city}</td>
+                    <td>${val.address}</td>
+                    <td>${val.phone}</td>
+                    <td>${val.course}</td> 
+                    <td>${val.status}</td> 
+                </tr>
+             `
+    })
+    document.getElementById('record').innerHTML = tbl;
+
+</script>

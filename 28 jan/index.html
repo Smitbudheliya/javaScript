@@ -1,0 +1,15 @@
+<script>
+    let myInclude=(a,val) =>{
+        for(i=0; i<a.length;i++){
+            if(a[i] == val){
+                return true;
+            }
+        }
+        return false;
+    }
+    let arr =[10, 2, 6, 5, 8];
+    let value = parseInt(prompt("enter Value"))
+    let ans = myInclude(arr,value);
+    console.log(ans);
+
+</script>

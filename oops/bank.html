@@ -1,0 +1,31 @@
+<title>bank</title>
+<h1>Aapdo Vahivat </h1>
+<script>
+    class Bank{
+        constructor(acno, name, amt){
+            this.acno = acno;
+            this.name = name;
+            this.amt = amt;
+        }
+        withdraw(amount){
+            if(this.amt< amount){
+                alert(`insuffience balance`);
+            }
+            else{
+                this.amt = this.amt - amount;
+                console.log(`Balance :- ${this.amt}`);
+                alert(`withdrawal succesfully`);
+                
+            }
+        }
+        deposite(amount){
+            this.amt = this.amt = amount;
+            console.log(`Balance :- ${this.amt}`);
+            alert(`deposite4 succesfully`)   ;         
+        }
+    }
+    let bank = new Bank (1111,"jay",1000);
+    bank.withdraw(100);
+    bank.deposite(200);
+    bank.withdraw(300);
+</script>
