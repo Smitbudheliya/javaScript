@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+</head>
+
+<body>
+
+    <div 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    >
+        <h1>Bank Account</h1>
+        <!-- Display Account Information -->
+        <p>Account Number: <span id="accountNumber">12345</span></p>
+        <p>Balance: $<span id="balance">1000</span></p>
+    </div>
+
+    <div>
+        <label for="depositAmount">Deposit Amount: </label>
+        <input type="number" id="depositAmount" placeholder="Enter amount to deposit">
+        <button onclick="deposit()">Deposit</button>
+    </div>
+
+    <div>
+        <label for="withdrawAmount">Withdraw Amount: </label>
+        <input type="number" id="withdrawAmount" placeholder="Enter amount to withdraw">
+        <button onclick="withdraw()">Withdraw</button>
+    </div>
+
+
+
+    <script>
+        // BankAccount class definition
+        class BankAccount {
+            constructor(accountNumber, balance = 0) {
+                this.accountNumber = accountNumber;
+                this.balance = balance;
+            }
+
+            deposit(amount) {
+                if (amount > 0) {
+                    this.balance += amount;
+                    alert(`Deposited $${amount}. New balance: $${this.balance}`);
+                    return this.balance;
+                } else {
+                    alert("Please enter a positive amount to deposit.");
+                }
+            }
+
+            withdraw(amount) {
+                if (amount > 0 && amount <= this.balance) {
+                    this.balance -= amount;
+                    alert(`Withdrew $${amount}. New balance: $${this.balance}`);
+                    return this.balance;
+                } else if (amount > this.balance) {
+                    alert("Insufficient funds.");
+                } else {
+                    alert("Please enter a positive amount to withdraw.");
+                }
+            }
+
+            getBalance() {
+                return this.balance;
+            }
+        }
+
+        // Create a BankAccount instance
+        const account = new BankAccount(12345, 1000);
+
+        // Deposit function using the input field
+        function deposit() {
+            const amount = parseFloat(document.getElementById("depositAmount").value);
+            if (!isNaN(amount) && amount > 0) {
+                account.deposit(amount);
+                updateBalance();
+            } else {
+                alert("Please enter a valid deposit amount.");
+            }
+        }
+
+        // Withdraw function using the input field
+        function withdraw() {
+            const amount = parseFloat(document.getElementById("withdrawAmount").value);
+            if (!isNaN(amount) && amount > 0) {
+                account.withdraw(amount);
+                updateBalance();
+            } else {
+                alert("Please enter a valid withdrawal amount.");
+            }
+        }
+
+        // Function to update the balance displayed on the page
+        function updateBalance() {
+            const balance = account.getBalance();
+            document.getElementById("balance").textContent = balance.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>

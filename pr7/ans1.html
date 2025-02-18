@@ -1,6 +1,6 @@
 <!-- 1. Write a JavaScript program to create a class called "Person" with properties for name, age and country. Include a method to display the person's details. Create two instances of the 'Person' class and display their details. -->
 <script>
-    // Define the Person class
+
     class Person {
         constructor(name, age, country) {
             this.name = name;
@@ -8,7 +8,7 @@
             this.country = country;
         }
 
-        // Method to display person's details
+
         displayDetails() {
             console.log(`Name: ${this.name}`);
             console.log(`Age: ${this.age}`);
@@ -16,11 +16,10 @@
         }
     }
 
-    // Create two instances of the Person class
+
     let person1 = new Person('Alice', 30, 'USA');
     let person2 = new Person('Bob', 25, 'Canada');
 
-    // Display their details
     console.log("Person 1 Details:");
     person1.displayDetails();
 
