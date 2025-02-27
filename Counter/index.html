@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Stylish Counter</title>
+</head>
+<body>
+  <div class="counter-container">
+    <h1>Counter</h1>
+    <p id="counter">0</p> 
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+  </div>
+  <script>
+    let counter = 0;
+    const counterDisplay = document.getElementById('counter');
+
+    document.getElementById('increment').onclick = function() {
+      counter++;
+      counterDisplay.textContent = counter;
+    };
+    document.getElementById('decrement').onclick = function() {
+      if (counter >
+       0) {
+        counter--;
+        counterDisplay.textContent = counter;
+      }
+    };
+  </script>
+</body>
+</html>

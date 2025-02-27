@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+    color: #333; 
+}
+
+
+.container {
+    width: 100%;
+    max-width: 450px; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    border: 1px solid #ddd; 
+}
+
+/* Header Style */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #4A90E2; 
+}
+
+/* Input Field */
+input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    margin-right: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3); 
+}
+
+/* Add Task Button */
+button {
+    /* margin:2px ; */
+    padding: 12px 24px;
+    background-color: #4CAF50; 
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Add Task Button Hover Effect */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); 
+}
+/* Add Task Button Active Effect */
+button:active {
+    transform: scale(0.98); 
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Task List Item */
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 8px 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    font-size: 1rem;
+    color: #333; 
+    transition: background-color 0.3s ease;
+}
+
+/* Task List Item Hover Effect */
+li:hover {
+    background-color: #f1f1f1; 
+}
+
+/* Delete Button */
+button.delete {
+    background-color: #e74c3c; /* Red for delete action */
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Delete Button Hover Effect */
+button.delete:hover {
+    background-color: #c0392b;
+    transform: scale(1.1); /* Slight grow effect on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    input[type="text"] {
+        width: 60%;
+    }
+    
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

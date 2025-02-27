@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Second Top Alert with Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .temp-alert {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      position: fixed;
+      top: -80px; /* Start hidden above the screen */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, top 0.5s ease-in-out;
+    }
+
+    .temp-alert.show {
+      opacity: 1;
+      pointer-events: auto;
+      top: 20px; /* Slide down to 20px from the top */
+    }
+
+    .temp-alert.hide {
+      opacity: 0;
+      top: -80px; /* Slide back above the screen */
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showAlert()">Show Alert</button>
+
+<div id="tempAlert" class="temp-alert">
+  This is a 1-second animated top alert!
+</div>
+
+<script>
+  function showAlert() {
+    const alertBox = document.getElementById('tempAlert');
+    
+    // Show the alert with the slide down effect
+    alertBox.classList.remove('hide');
+    alertBox.classList.add('show');
+
+    // After 1 second, hide the alert with the slide up effect
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+      alertBox.classList.add('hide');
+    }, 1000); // Alert disappears after 1 second
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Second Top Alert with Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .temp-alert {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      position: fixed;
+      top: -80px; /* Start hidden above the screen */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, top 0.5s ease-in-out;
+    }
+
+    .temp-alert.show {
+      opacity: 1;
+      pointer-events: auto;
+      top: 20px; /* Slide down to 20px from the top */
+    }
+
+    .temp-alert.hide {
+      opacity: 0;
+      top: -80px; /* Slide back above the screen */
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showAlert()">Show Alert</button>
+
+<div id="tempAlert" class="temp-alert">
+  This is a 1-second animated top alert!
+</div>
+
+<script>
+  function showAlert() {
+    const alertBox = document.getElementById('tempAlert');
+    
+    // Show the alert with the slide down effect
+    alertBox.classList.remove('hide');
+    alertBox.classList.add('show');
+
+    // After 1 second, hide the alert with the slide up effect
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+      alertBox.classList.add('hide');
+    }, 1000); // Alert disappears after 1 second
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Second Top Alert with Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .temp-alert {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      position: fixed;
+      top: -80px; /* Start hidden above the screen */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, top 0.5s ease-in-out;
+    }
+
+    .temp-alert.show {
+      opacity: 1;
+      pointer-events: auto;
+      top: 20px; /* Slide down to 20px from the top */
+    }
+
+    .temp-alert.hide {
+      opacity: 0;
+      top: -80px; /* Slide back above the screen */
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showAlert()">Show Alert</button>
+
+<div id="tempAlert" class="temp-alert">
+  This is a 1-second animated top alert!
+</div>
+
+<script>
+  function showAlert() {
+    const alertBox = document.getElementById('tempAlert');
+    
+    // Show the alert with the slide down effect
+    alertBox.classList.remove('hide');
+    alertBox.classList.add('show');
+
+    // After 1 second, hide the alert with the slide up effect
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+      alertBox.classList.add('hide');
+    }, 1000); // Alert disappears after 1 second
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Second Top Alert with Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .temp-alert {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      position: fixed;
+      top: -80px; /* Start hidden above the screen */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, top 0.5s ease-in-out;
+    }
+
+    .temp-alert.show {
+      opacity: 1;
+      pointer-events: auto;
+      top: 20px; /* Slide down to 20px from the top */
+    }
+
+    .temp-alert.hide {
+      opacity: 0;
+      top: -80px; /* Slide back above the screen */
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showAlert()">Show Alert</button>
+
+<div id="tempAlert" class="temp-alert">
+  This is a 1-second animated top alert!
+</div>
+
+<script>
+  function showAlert() {
+    const alertBox = document.getElementById('tempAlert');
+    
+    // Show the alert with the slide down effect
+    alertBox.classList.remove('hide');
+    alertBox.classList.add('show');
+
+    // After 1 second, hide the alert with the slide up effect
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+      alertBox.classList.add('hide');
+    }, 1000); // Alert disappears after 1 second
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Second Top Alert with Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .temp-alert {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      position: fixed;
+      top: -80px; /* Start hidden above the screen */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, top 0.5s ease-in-out;
+    }
+
+    .temp-alert.show {
+      opacity: 1;
+      pointer-events: auto;
+      top: 20px; /* Slide down to 20px from the top */
+    }
+
+    .temp-alert.hide {
+      opacity: 0;
+      top: -80px; /* Slide back above the screen */
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showAlert()">Show Alert</button>
+
+<div id="tempAlert" class="temp-alert">
+  This is a 1-second animated top alert!
+</div>
+
+<script>
+  function showAlert() {
+    const alertBox = document.getElementById('tempAlert');
+    
+    // Show the alert with the slide down effect
+    alertBox.classList.remove('hide');
+    alertBox.classList.add('show');
+
+    // After 1 second, hide the alert with the slide up effect
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+      alertBox.classList.add('hide');
+    }, 1000); // Alert disappears after 1 second
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Second Top Alert with Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .temp-alert {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      position: fixed;
+      top: -80px; /* Start hidden above the screen */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, top 0.5s ease-in-out;
+    }
+
+    .temp-alert.show {
+      opacity: 1;
+      pointer-events: auto;
+      top: 20px; /* Slide down to 20px from the top */
+    }
+
+    .temp-alert.hide {
+      opacity: 0;
+      top: -80px; /* Slide back above the screen */
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showAlert()">Show Alert</button>
+
+<div id="tempAlert" class="temp-alert">
+  This is a 1-second animated top alert!
+</div>
+
+<script>
+  function showAlert() {
+    const alertBox = document.getElementById('tempAlert');
+    
+    // Show the alert with the slide down effect
+    alertBox.classList.remove('hide');
+    alertBox.classList.add('show');
+
+    // After 1 second, hide the alert with the slide up effect
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+      alertBox.classList.add('hide');
+    }, 1000); // Alert disappears after 1 second
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Second Top Alert with Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .temp-alert {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      position: fixed;
+      top: -80px; /* Start hidden above the screen */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, top 0.5s ease-in-out;
+    }
+
+    .temp-alert.show {
+      opacity: 1;
+      pointer-events: auto;
+      top: 20px; /* Slide down to 20px from the top */
+    }
+
+    .temp-alert.hide {
+      opacity: 0;
+      top: -80px; /* Slide back above the screen */
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showAlert()">Show Alert</button>
+
+<div id="tempAlert" class="temp-alert">
+  This is a 1-second animated top alert!
+</div>
+
+<script>
+  function showAlert() {
+    const alertBox = document.getElementById('tempAlert');
+    
+    // Show the alert with the slide down effect
+    alertBox.classList.remove('hide');
+    alertBox.classList.add('show');
+
+    // After 1 second, hide the alert with the slide up effect
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+      alertBox.classList.add('hide');
+    }, 1000); // Alert disappears after 1 second
+  }
+</script>
+
+</body>
+</html>
+  
