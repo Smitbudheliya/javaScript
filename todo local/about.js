@@ -1,12 +1,13 @@
 
 const viewTask = () => {
-    const tasks = JSON.parse(localStorage.getItem('alltask')) || [];
+    const task = JSON.parse(localStorage.getItem('alltask')) || [];
     let tbl = "";
-    tasks.map((val, index) => {
+    task.map((val, index) => {
         tbl += `
             <tr>
                 <td>${val.taskid}</td>
                 <td>${val.task}</td>
+                <td> <button onclick="deleteTask(${val.taskid})" class="btn btn-danger"> Delete </button> </td>
             </tr>
         `;
     });
@@ -34,9 +35,9 @@ const addTask = () => {
         alert("Task successfully added (first task).");
     }
     else {
-        let tasks = JSON.parse(localStorage.getItem('alltask'));
-        tasks.push(obj);
-        localStorage.setItem('alltask', JSON.stringify(tasks));
+        let task = JSON.parse(localStorage.getItem('alltask'));
+        task.push(obj);
+        localStorage.setItem('alltask', JSON.stringify(task));
         alert("Task successfully added.");
     }
 
@@ -44,3 +45,13 @@ const addTask = () => {
     viewTask();
 };
 viewTask();
+const deleteTask = (taskid)=> {
+    let task = JSON.parse(localStorage.getItem('alltask'));
+    task = task.filter(task => task.taskid !== taskid);
+    localStorage.setItem('alltask', JSON.stringify(task));
+    viewTask();
+}
+const deletAll = ()=>{
+    localStorage.removeItem('alltask')
+    viewTask();
+}
