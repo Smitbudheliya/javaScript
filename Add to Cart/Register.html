@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Being La-Z</title>
+    <link rel="icon" href="./imgs/Pink_Typography_Initial_LA_Logo__2_-removebg-preview.png" type="image/icon type">
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('https://i.pinimg.com/736x/e6/7d/af/e67daf68a6e8f6d4a9283cb7d64b098c.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .register-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            outline: none;
+            background: #f2f2f2;
+            border-radius: 8px;
+            font-size: 16px;
+            padding-left: 40px;
+        }
+
+        .input-group img {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background: #ff5722;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background: #e64a19;
+        }
+
+        .links {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-container">
+        <h2>🥗 Register to Foodie</h2>
+        <div class="input-group">
+            <img src="https://img.icons8.com/ios-glyphs/30/user.png" alt="User Icon">
+            <input type="text" placeholder="Username" id="name" required>
+        </div>
+        <div class="input-group">
+            <img src="https://img.icons8.com/ios-glyphs/30/new-post.png" alt="Email Icon">
+            <input type="email" placeholder="Email" id="email" required>
+        </div>
+        <div class="input-group">
+            <img src="https://img.icons8.com/ios-glyphs/30/lock.png" alt="Password Icon">
+            <input type="password" placeholder="Password" id="password" required>
+        </div>
+        <button class="register-btn" type="submit" onclick="addUser()">Register</button>
+        <p class="links">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script src="Authentication.js">
+
+    </script>
+
+</body>
+
+</html>
