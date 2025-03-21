@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url('https://i.pinimg.com/736x/e7/a8/6d/e7a86d6e618c17800962dc2308ca08c9.jpg');
+            /* background: linear-gradient(135deg, #667eea, #764ba2); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .weather-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .temp {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .weather-icon {
+            width: 100px;
+            height: 100px;
+        }
+        #cityInput{
+            background-color: #ffffff64;
+
+        }
+
+        button {
+            background: #ffffff64;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="weather-card">
+        <h2 style="margin-bottom:30px ;">Weather App</h2>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Search</button>
+        <div id="weatherResult">
+            <img class="weather-icon" id="icon" src="https://cdn-icons-png.flaticon.com/512/1555/1555512.png">
+            <p class="temp" id="temp"></p>
+            <p id="description"></p>
+        </div>
+    </div>
+
+    <script>
+        const API_KEY = `14951c93f3d11e8ac8bed96dd90e8bc7`;
+
+        function getWeather() {
+            const city = document.getElementById("cityInput").value;
+            if (!city) return alert("Please enter a city name");
+
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("temp").innerHTML = `${data.main.temp}°C`;
+                    document.getElementById("description").innerHTML = data.weather[0].description;
+
+                    // Change icon based on description
+                    const weatherCondition = data.weather[0].main.toLowerCase();
+                    let iconUrl = "";
+
+                    if (weatherCondition.includes("clear")) {
+                        iconUrl = "https://cdn-icons-png.flaticon.com/512/3222/3222800.png";
+                    } else if (weatherCondition.includes("cloud")) {
+                        iconUrl = "https://cdn-icons-png.flaticon.com/512/7084/7084486.png";
+                    } else if (weatherCondition.includes("rain")) {
+                        iconUrl = "https://cdn-icons-png.flaticon.com/512/1332/1332316.png";
+                    } else if (weatherCondition.includes("thunderstorm")) {
+                        iconUrl = "https://cdn-icons-png.flaticon.com/512/3104/3104612.png";
+                    } else if (weatherCondition.includes("snow")) {
+                        iconUrl = "https://cdn-icons-png.flaticon.com/512/2530/2530064.png";
+                    } else if (weatherCondition.includes("mist") || weatherCondition.includes("fog")) {
+                        iconUrl = "https://www.shutterstock.com/image-vector/fog-blue-rgb-color-icon-260nw-1721057815.jpg";
+                    } else {
+                        const iconKey = data.weather[0].icon;
+                        iconUrl = `https://static.thenounproject.com/png/1174149-200.png`;
+                    }
+                    // ${data.weather[0].icon}
+                    document.getElementById("icon").src = iconUrl;
+                })
+                .catch(error => console.error("Error:", error));
+        }
+    </script>
+
+</body>
+
+</html>
